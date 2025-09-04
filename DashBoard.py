@@ -5,12 +5,23 @@ import plotly.graph_objects as go
 
 st.set_page_config(layout="wide")
     
-df = pd.read_excel(r'Sales_v1.xlsx')
-df.dropna(inplace=True)
-df.columns = df.columns.str.strip()
-df.drop_duplicates()
 
 with st.sidebar:
+    st.header("Upload Your Data")
+    uploaded_file = st.file_uploader("Choose a CSV file", type="xlsx")
+    
+    if uploaded_file is not None:
+        st.success("File uploaded successfully!")
+        df = pd.read_excel(uploaded_file)
+
+    else:
+        st.info("Please upload a CSV file to get started.")
+        st.stop()
+
+    df.dropna(inplace=True)
+    df.columns = df.columns.str.strip()
+    df.drop_duplicates()
+
     st.title("Slicers")
 
     # Slicer_Of_Year = st.multiselect("Slicer Of Year", options=df['Year'].unique())
