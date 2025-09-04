@@ -145,7 +145,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     df_grouped = df.groupby("Date", as_index=False)["Sales"].sum()
 
-    pg = px.line(df_grouped, x='Date', y='Sales', title="Trend Line Of Sales", height=320)
+    pg = px.line(df_grouped, x='Date', y='Sales', title="Trend Line Of Sales", height=350)
     pg.update_layout(uniformtext_minsize=14,
         uniformtext_mode='hide',
         margin=dict(l=20, r=20, t=21, b=170),
