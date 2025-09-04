@@ -159,7 +159,7 @@ with col1:
     st.plotly_chart(pg, use_container_width=True)
 
 with col2:
-    pg = px.treemap(df, path=['Country'], values='Sales', title='Sales by Country', height=300)
+    pg = px.treemap(df, path=['Country'], values='Sales', title='Sales by Country', height=250)
     pg.update_layout(uniformtext_minsize=14,
         margin=dict(l=20, r=20, t=21, b=13),
         legend=dict(
