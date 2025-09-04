@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 st.set_page_config(layout="wide")
     
-df = pd.read_excel(r'C:\Users\User\OneDrive\Desktop\Machine Learning Code\Sales_v1.xlsx')
+df = pd.read_excel(r'Sales_v1.xlsx')
 df.dropna(inplace=True)
 df.columns = df.columns.str.strip()
 df.drop_duplicates()
