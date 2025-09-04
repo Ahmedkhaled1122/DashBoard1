@@ -127,7 +127,7 @@ with col1:
 with col2:
     df_grouped = df.groupby('Product', as_index=False)['Sales'].sum()
 
-    pg = px.pie(df_grouped, values='Sales', names='Product', title="Sales by Product", height=340)
+    pg = px.pie(df_grouped, values='Sales', names='Product', title="Sales by Product", height=250)
     pg.update_layout(uniformtext_minsize=14,
         uniformtext_mode='hide',
         margin=dict(l=20, r=20, t=50, b=20),
