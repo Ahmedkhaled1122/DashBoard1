@@ -176,7 +176,7 @@ with col2:
 with col3:
     df_grouped = df.groupby(['Country', 'Segment'], as_index=False)['Sales'].sum()
 
-    pg = px.bar(df_grouped, x='Country', y='Sales', color='Segment', barmode='group', title="Sales by Country and Segment", text='Sales', height=260)
+    pg = px.bar(df_grouped, x='Country', y='Sales', color='Segment', barmode='group', title="Sales by Country and Segment", text='Sales', height=360)
     pg.update_layout(
         uniformtext_minsize=7,   
         margin=dict(l=0, r=0, t=50, b=170),
