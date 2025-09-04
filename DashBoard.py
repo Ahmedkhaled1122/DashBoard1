@@ -109,9 +109,9 @@ with col1:
         title="Sales by Segment",
         yaxis={'categoryorder':'total ascending'},
         xaxis=dict(showticklabels=False),
-        height=200,
+        height=250,
         uniformtext_minsize=14,
-        uniformtext_mode='hide',
+        # uniformtext_mode='hide',
         margin=dict(l=20, r=20, t=50, b=20),
         legend=dict(
         yanchor="top",
